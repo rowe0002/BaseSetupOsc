@@ -15,14 +15,22 @@
 
 @implementation AppDelegate
 
+Pfx*      p = nullptr;
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    
+    p = new Pfx();
+    if (!p)
+    {
+        NSLog(@"ERROR: can't get audio IO");
+        exit(1);
+    }
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
-    
+    delete p;
+    p = nullptr;
 }
 
 - (BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app { return YES; }
