@@ -6,8 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8A9F3A802F0447910063ADCB /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9F3A7D2F0447910063ADCB /* CoreAudio.framework */; };
+		8A9F3A812F0447910063ADCB /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9F3A7E2F0447910063ADCB /* AudioUnit.framework */; };
+		8A9F3A822F0447910063ADCB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9F3A7F2F0447910063ADCB /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8A9F3A5E2F04266F0063ADCB /* BaseSetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseSetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9F3A7D2F0447910063ADCB /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		8A9F3A7E2F0447910063ADCB /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		8A9F3A7F2F0447910063ADCB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +32,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A9F3A802F0447910063ADCB /* CoreAudio.framework in Frameworks */,
+				8A9F3A812F0447910063ADCB /* AudioUnit.framework in Frameworks */,
+				8A9F3A822F0447910063ADCB /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				8A9F3A602F04266F0063ADCB /* BaseSetup */,
+				8A9F3A7C2F0447910063ADCB /* Frameworks */,
 				8A9F3A5F2F04266F0063ADCB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +56,16 @@
 				8A9F3A5E2F04266F0063ADCB /* BaseSetup.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8A9F3A7C2F0447910063ADCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A9F3A7F2F0447910063ADCB /* AudioToolbox.framework */,
+				8A9F3A7E2F0447910063ADCB /* AudioUnit.framework */,
+				8A9F3A7D2F0447910063ADCB /* CoreAudio.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
