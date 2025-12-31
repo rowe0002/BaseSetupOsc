@@ -12,12 +12,14 @@ Scheduler* scheduler = nullptr;
 
 BaseSetup::BaseSetup(void)
 {
-    
+    osc = new Oscillator();
+    AddUG(osc);
+    osc->TurnOn(440.0);
 }
 
 BaseSetup::~BaseSetup(void)
 {
-    
+    delete osc;
 }
 
 void BaseSetup::RouteAudio(double** mixChannels)
@@ -31,4 +33,6 @@ void BaseSetup::RouteAudio(double** mixChannels)
     for (i=0; i<2; i++)
         for (j=0; j<Unit::bufferSize; j++)
             mixChannels[i][j] = 0.0;
+    
+    osc->MixOutputSamples(mixChannels, 2);
 }

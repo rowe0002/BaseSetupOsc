@@ -6,9 +6,13 @@
 //
 
 #include "Score.hpp"
+#include "Oscillator.hpp"
 
 class BaseSetup : public Score
 {
+private:
+    Oscillator* osc;
+    
 public:
     BaseSetup(void);
    ~BaseSetup(void);
