@@ -16,7 +16,8 @@
 
 @implementation AppDelegate
 
-Pfx*      p = nullptr;
+Pfx*       p = nullptr;
+BaseSetup* b = nullptr;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -26,10 +27,15 @@ Pfx*      p = nullptr;
         NSLog(@"ERROR: can't get audio IO");
         exit(1);
     }
+    b = new BaseSetup();
+    p->SetScore(b);
+    p->Start();
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
+    p->Stop();
+    delete b;
     delete p;
     p = nullptr;
 }
