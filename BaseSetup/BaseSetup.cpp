@@ -6,6 +6,9 @@
 //
 
 #include "BaseSetup.hpp"
+#include "Scheduler.hpp"
+
+Scheduler* scheduler = nullptr;
 
 BaseSetup::BaseSetup(void)
 {
