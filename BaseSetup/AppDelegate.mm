@@ -12,6 +12,8 @@
 @interface AppDelegate ()
 
 @property (strong) IBOutlet NSWindow *window;
+@property (weak)   IBOutlet NSButton *oscButton;
+
 @end
 
 @implementation AppDelegate
@@ -38,6 +40,10 @@ BaseSetup* b = nullptr;
     delete b;
     delete p;
     p = nullptr;
+}
+
+- (IBAction)toggleOsc:(id)sender
+{
 }
 
 - (BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app { return YES; }
