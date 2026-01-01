@@ -14,7 +14,6 @@ BaseSetup::BaseSetup(void)
 {
     osc = new Oscillator();
     AddUG(osc);
-    osc->TurnOn(440.0);
 }
 
 BaseSetup::~BaseSetup(void)

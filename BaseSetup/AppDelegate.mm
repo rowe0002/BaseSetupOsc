@@ -42,8 +42,23 @@ BaseSetup* b = nullptr;
     p = nullptr;
 }
 
+bool onOff = false;
+
 - (IBAction)toggleOsc:(id)sender
 {
+    if (onOff == false)
+    {
+        [_oscButton setTitle:@""];
+        [_oscButton setTitle:@"Turn Oscillator Off"];
+        b->osc->TurnOn();
+        onOff = true;
+    } else
+    {
+        [_oscButton setTitle:@""];
+        [_oscButton setTitle:@"Turn Oscillator On"];
+        b->osc->TurnOff();
+        onOff = false;
+    }
 }
 
 - (BOOL)applicationSupportsSecureRestorableState:(NSApplication *)app { return YES; }

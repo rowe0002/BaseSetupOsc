@@ -10,7 +10,7 @@
 
 class BaseSetup : public Score
 {
-private:
+public:
     Oscillator* osc;
     
 public:
